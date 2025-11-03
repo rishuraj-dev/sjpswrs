@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Johns Public School - Excellence in Education | Warisaliganj, Nawada</title>
+    <meta name="description" content="Premier educational institution in Warisaliganj, Nawada - Shaping tomorrow's leaders through excellence in education.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#d4af37',
+                            50: '#fef9e7',
+                            400: '#fbbf24',
+                            500: '#d4af37',
+                            600: '#b8922b',
+                        },
+                        dark: {
+                            DEFAULT: '#0a0e1a',
+                            800: '#1f2937',
+                            900: '#111827',
+                            950: '#0a0e1a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Sora', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-950 text-gray-100 font-sans antialiased overflow-x-hidden" style="overflow-x: hidden;">
+    
+    <!-- Cursor Follower -->
+    <div id="cursor-dot" class="cursor-dot"></div>
+    <div id="cursor-outline" class="cursor-outline"></div>
+    
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar-top"></div>
+    
+    <!-- Premium Loading Screen -->
+    <div id="preloader" class="preloader-overlay">
+        <div class="preloader-content">
+            <div class="loader-ring">
+                <div class="loader-ring-inner"></div>
+                <div class="loader-ring-inner"></div>
+                <div class="loader-ring-inner"></div>
+                <!-- Logo INSIDE the loading circle -->
+                <div class="loader-logo">
+                    <img src="assets/logost.png" alt="Logo">
+                </div>
+            </div>
+            <h2 class="loader-text">St. Johns Public School</h2>
+            <div class="loader-dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar-premium">
+        <div class="navbar-bg"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="logo-container">
+                    <div class="logo-glow"></div>
+                    <img src="assets/logost.png" alt="St. Johns" class="logo-img">
+                    <div class="logo-text">
+                        <h1>St. Johns</h1>
+                        <p>Public School</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="#home" class="nav-link active">Home</a>
+                    
+                    <div class="nav-dropdown-container">
+                        <button class="nav-link">
+                            About Us <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </button>
+                        <div class="nav-dropdown-content">
+                            <a href="#about-school">About School</a>
+                            <a href="#director-message">Director Message</a>
+                            <a href="#principal-message">Principal Message</a>
+                            <a href="#vice-principal-message">Vice Principal Message</a>
+                            <a href="#motto">Motto</a>
+                            <a href="#aims-objective">Aims & Objective</a>
+                            <a href="#guidelines">Guidelines for Parents</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-dropdown-container">
+                        <button class="nav-link">
+                            Academic <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </button>
+                        <div class="nav-dropdown-content">
+                            <a href="#examinations">Examinations</a>
+                            <a href="#admission-procedure">Admission Procedure</a>
+                            <a href="#curriculum">Curriculum</a>
+                            <a href="#mandatory-disclosure">Mandatory Disclosure</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-dropdown-container">
+                        <button class="nav-link">
+                            Facilities <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </button>
+                        <div class="nav-dropdown-content">
+                            <a href="#library">Library</a>
+                            <a href="#lab">Lab</a>
+                        </div>
+                    </div>
+
+                    <a href="#activities" class="nav-link">Activities</a>
+
+                    <div class="nav-dropdown-container">
+                        <button class="nav-link">
+                            Code of Conduct <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </button>
+                        <div class="nav-dropdown-content">
+                            <a href="#uniform">Uniform</a>
+                            <a href="#fee-charge">Fee and Charge</a>
+                            <a href="#rules-discipline">Rules & Discipline</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-dropdown-container">
+                        <button class="nav-link">
+                            Admission <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </button>
+                        <div class="nav-dropdown-content">
+                            <a href="#admission-criteria">Criteria for Admission</a>
+                            <a href="assets/Admission_Form.pdf" download>Download Form</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-dropdown-container">
+                        <button class="nav-link">
+                            Gallery <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </button>
+                        <div class="nav-dropdown-content">
+                            <a href="#image-gallery">Image Gallery</a>
+                            <a href="#media-coverage">Media Coverage</a>
+                            <a href="#video-gallery">Video Gallery</a>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="nav-link">Contact Us</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="#admission" class="cta-button">
+                        Apply Now
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden mobile-menu-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-content">
+                <a href="#home" class="mobile-link">Home</a>
+                
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-btn">
+                        <span>About Us</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="#about-school">About School</a>
+                        <a href="#director-message">Director Message</a>
+                        <a href="#principal-message">Principal Message</a>
+                        <a href="#vice-principal-message">Vice Principal Message</a>
+                        <a href="#motto">Motto</a>
+                        <a href="#aims-objective">Aims & Objective</a>
+                        <a href="#guidelines">Guidelines for Parents</a>
+                    </div>
+                </div>
+
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-btn">
+                        <span>Academic</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="#examinations">Examinations</a>
+                        <a href="#admission-procedure">Admission Procedure</a>
+                        <a href="#curriculum">Curriculum</a>
+                        <a href="#mandatory-disclosure">Mandatory Disclosure</a>
+                    </div>
+                </div>
+
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-btn">
+                        <span>Facilities</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="#library">Library</a>
+                        <a href="#lab">Lab</a>
+                    </div>
+                </div>
+
+                <a href="#activities" class="mobile-link">Activities</a>
+
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-btn">
+                        <span>Code of Conduct</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="#uniform">Uniform</a>
+                        <a href="#fee-charge">Fee and Charge</a>
+                        <a href="#rules-discipline">Rules & Discipline</a>
+                    </div>
+                </div>
+
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-btn">
+                        <span>Admission</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="#admission-criteria">Criteria for Admission</a>
+                        <a href="assets/Admission_Form.pdf" download>Download Form</a>
+                    </div>
+                </div>
+
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-btn">
+                        <span>Gallery</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="#image-gallery">Image Gallery</a>
+                        <a href="#media-coverage">Media Coverage</a>
+                        <a href="#video-gallery">Video Gallery</a>
+                    </div>
+                </div>
+
+                <a href="#contact" class="mobile-link">Contact Us</a>
+                
+                <div class="mt-6">
+                    <a href="#admission" class="cta-button w-full justify-center">
+                        Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Swiper Slider -->
+    <section id="home" class="hero-section">
+        <!-- Animated Background -->
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="grid-overlay"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+
+        <!-- Swiper Slider -->
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('assets/slider.jpg')"></div>
+                <div class="swiper-slide" style="background-image: url('assets/slider2.jpg')"></div>
+                <div class="swiper-slide" style="background-image: url('assets/slider3.jpg')"></div>
+                <div class="swiper-slide" style="background-image: url('assets/slider4.jpg')"></div>
+            </div>
+            <div class="slider-overlay"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Content -->
+                    <div class="text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="badge-premium">
+                            <span class="badge-dot"></span>
+                            <span>Excellence Since 2010</span>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            <span class="title-line-1">Every Student</span>
+                            <span class="title-line-2">Shapes Tomorrow</span>
+                        </h1>
+                        
+                        <p class="hero-subtitle">
+                            Where vision meets precision — nurturing young minds through innovative education and holistic development.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#admission" class="btn-hero-primary">
+                                <span>Start Your Journey</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#about" class="btn-hero-secondary">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Explore More</span>
+                            </a>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-value" data-count="15">0</div>
+                                <div class="stat-label">Years Excellence</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" data-count="1000">0</div>
+                                <div class="stat-label">Students</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" data-count="50">0</div>
+                                <div class="stat-label">Expert Faculty</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Content - Floating Image -->
+                    <div class="hero-image-container" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="floating-frame">
+                            <img src="assets/slider.jpg" alt="School Campus" class="hero-main-image">
+                            
+                            <!-- Floating Stats -->
+                            <div class="floating-card floating-card-1">
+                                <div class="card-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="card-info">
+                                    <span class="card-label">Success Rate</span>
+                                    <span class="card-value">98%</span>
+                                </div>
+                            </div>
+
+                            <div class="floating-card floating-card-2">
+                                <div class="card-icon card-icon-blue">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div class="card-info">
+                                    <span class="card-label">Resources</span>
+                                    <span class="card-value">10K+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator - Arrow Only -->
+        <div class="scroll-indicator"></div>
+
+        <!-- Slider Navigation -->
+        <div class="hero-slider-nav">
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Quick Info Bar -->
+    <section class="info-bar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="info-bar-content">
+                <div class="info-item" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>K. N. Market, Warisaliganj, Nawada</span>
+                </div>
+                <div class="info-item" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>06324-273356, 7033872656</span>
+                </div>
+                <div class="info-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-id-card"></i>
+                    <span>UDISE: 10361407530</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="quick-links-grid">
+                <!-- Card 1 -->
+                <a href="#aims-objective" class="quick-card quick-card-gold" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="quick-card-glow"></div>
+                    <div class="quick-card-content">
+                        <div class="quick-icon">
+                            <img src="icons/target.svg" alt="Aims">
+                        </div>
+                        <h3>AIMS & OBJECTIVE</h3>
+                        <p>Our goals and objectives</p>
+                        <div class="quick-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="#admission-procedure" class="quick-card quick-card-blue" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="quick-card-glow"></div>
+                    <div class="quick-card-content">
+                        <div class="quick-icon">
+                            <img src="icons/admission.svg" alt="Admission">
+                        </div>
+                        <h3>ADMISSION PROCEDURE</h3>
+                        <p>Join our school family</p>
+                        <div class="quick-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="assets/Admission_Form.pdf" download class="quick-card quick-card-purple" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="quick-card-glow"></div>
+                    <div class="quick-card-content">
+                        <div class="quick-icon">
+                            <img src="icons/download.svg" alt="Download">
+                        </div>
+                        <h3>DOWNLOAD FORM</h3>
+                        <p>Get admission form</p>
+                        <div class="quick-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="#notice-board" class="quick-card quick-card-green" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="quick-card-glow"></div>
+                    <div class="quick-card-content">
+                        <div class="quick-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>NOTICE BOARD</h3>
+                        <p>Latest updates</p>
+                        <div class="quick-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section id="about" class="welcome-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header-premium" data-aos="fade-up">
+                <span class="section-badge">WELCOME TO</span>
+                <h2 class="section-title-premium">
+                    ST. JOHNS PUBLIC SCHOOL
+                </h2>
+                <div class="section-decorator">
+                    <span></span>
+                    <i class="fas fa-graduation-cap"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mt-16">
+                <div class="welcome-image" data-aos="fade-right">
+                    <div class="image-frame">
+                        <img src="assets/slider2.jpg" alt="About School">
+                    </div>
+                </div>
+
+                <div class="welcome-content" data-aos="fade-left">
+                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                        St. Johns Public School management is a unique team of experienced educationists, qualified and trained teachers and corporate managers, striving to achieve excellence through continuous research and innovation.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        We introduce the latest training methodologies and maintain strict adherence to set guidelines, ensuring that every student receives the best possible education and support for their holistic development.
+                    </p>
+
+                    <div class="features-checklist">
+                        <div class="check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Academic Excellence</h4>
+                                <p>Rigorous curriculum & experienced faculty</p>
+                            </div>
+                        </div>
+                        <div class="check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Modern Infrastructure</h4>
+                                <p>Smart classrooms & latest facilities</p>
+                            </div>
+                        </div>
+                        <div class="check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Holistic Development</h4>
+                                <p>Character building & moral values</p>
+                            </div>
+                        </div>
+                        <div class="check-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Extra-Curricular</h4>
+                                <p>Sports, arts & cultural activities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="why-choose-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header-premium" data-aos="fade-up">
+                <span class="section-badge">Why Choose Our School?</span>
+                <h2 class="section-title-premium">
+                    Choosing Excellence, Opportunity, <span class="text-gradient">and Community</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+                <!-- Card 1 -->
+                <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="why-card-icon">
+                        <img src="icons/academic.svg" alt="Academic">
+                    </div>
+                    <h3>Academic Excellence</h3>
+                    <p>Commitment to academic excellence with rigorous curriculum and experienced faculty.</p>
+                    <a href="#special-features" class="why-card-link">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-card-icon why-icon-blue">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Holistic Development</h3>
+                    <p>Overall personality development with emphasis on character-building and moral values.</p>
+                    <a href="#special-features" class="why-card-link why-link-blue">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-card-icon why-icon-purple">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>State-of-the-Art Facilities</h3>
+                    <p>Modern infrastructure with smart classrooms, labs, library, and sports facilities.</p>
+                    <a href="#special-features" class="why-card-link why-link-purple">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-card-icon why-icon-green">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Dedicated Faculty and Staff</h3>
+                    <p>Qualified and trained teachers passionate about teaching and student success.</p>
+                    <a href="#special-features" class="why-card-link why-link-green">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="#contact" class="cta-button cta-button-large">
+                    View All Opportunities
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Features Section -->
+    <section id="special-features" class="special-features-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header-premium" data-aos="fade-up">
+                <span class="section-badge">SPECIAL FEATURES</span>
+                <h2 class="section-title-premium">
+                    What Makes Us <span class="text-gradient-blue">Special</span>
+                </h2>
+                <p class="section-subtitle">
+                    Welcome to our exceptional school! Here are the special features that set us apart
+                </p>
+            </div>
+
+            <div class="features-layout">
+                <!-- Sidebar -->
+                <div class="features-sidebar" data-aos="fade-right">
+                    <button class="feature-btn active" data-feature="0">
+                        <span class="feature-num">1</span>
+                        <span>Academic Excellence</span>
+                    </button>
+                    <button class="feature-btn" data-feature="1">
+                        <span class="feature-num">2</span>
+                        <span>Sports Facilities</span>
+                    </button>
+                    <button class="feature-btn" data-feature="2">
+                        <span class="feature-num">3</span>
+                        <span>Martial Arts</span>
+                    </button>
+                    <button class="feature-btn" data-feature="3">
+                        <span class="feature-num">4</span>
+                        <span>Extra-curricular Activities</span>
+                    </button>
+                    <button class="feature-btn" data-feature="4">
+                        <span class="feature-num">5</span>
+                        <span>Air-Conditioned Classrooms</span>
+                    </button>
+                    <button class="feature-btn" data-feature="5">
+                        <span class="feature-num">6</span>
+                        <span>Smart Classrooms</span>
+                    </button>
+                    <button class="feature-btn" data-feature="6">
+                        <span class="feature-num">7</span>
+                        <span>Hostel Facilities</span>
+                    </button>
+                </div>
+
+                <!-- Content -->
+                <div class="features-content" data-aos="fade-left">
+                    <!-- Feature 1: Academic Excellence -->
+                    <div class="feature-panel active" data-panel="0">
+                        <div class="feature-image-box">
+                            <img src="assets/slider2.jpg" alt="Academic Excellence">
+                        </div>
+                        <div class="feature-details">
+                            <h3><img src="icons/academic.svg" class="inline-svg">Academic Excellence</h3>
+                            <p>Our school is renowned for its commitment to academic excellence. With a rigorous curriculum, experienced faculty, and a supportive learning environment, we strive to nurture the intellectual growth and academic success of every student.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Experienced and qualified faculty</li>
+                                <li><i class="fas fa-check"></i> Comprehensive curriculum</li>
+                                <li><i class="fas fa-check"></i> Regular assessments and feedback</li>
+                                <li><i class="fas fa-check"></i> Individual attention to students</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Sports Facilities -->
+                    <div class="feature-panel" data-panel="1">
+                        <div class="feature-image-box">
+                            <img src="assets/slider3.jpg" alt="Sports Facilities">
+                        </div>
+                        <div class="feature-details">
+                            <h3><img src="icons/sports.svg" class="inline-svg">Sports Facilities</h3>
+                            <p>We believe in physical fitness and sports excellence. Our school provides excellent sports facilities including cricket, football, basketball, volleyball, and athletics.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Multi-purpose sports ground</li>
+                                <li><i class="fas fa-check"></i> Indoor games facilities</li>
+                                <li><i class="fas fa-check"></i> Professional sports coaches</li>
+                                <li><i class="fas fa-check"></i> Regular sports competitions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Martial Arts -->
+                    <div class="feature-panel" data-panel="2">
+                        <div class="feature-image-box">
+                            <img src="assets/slider4.jpg" alt="Martial Arts">
+                        </div>
+                        <div class="feature-details">
+                            <h3><img src="icons/martial-arts.svg" class="inline-svg">Martial Arts</h3>
+                            <p>Martial arts training develops self-discipline, confidence, and self-defense skills, helping build character and physical strength.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Trained martial arts instructors</li>
+                                <li><i class="fas fa-check"></i> Focus on discipline and respect</li>
+                                <li><i class="fas fa-check"></i> Self-defense techniques</li>
+                                <li><i class="fas fa-check"></i> Character building through practice</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4: Extra-curricular -->
+                    <div class="feature-panel" data-panel="3">
+                        <div class="feature-image-box">
+                            <img src="assets/slider.jpg" alt="Extra-curricular">
+                        </div>
+                        <div class="feature-details">
+                            <h3><img src="icons/extracurricular.svg" class="inline-svg">Extra-curricular Activities</h3>
+                            <p>Wide range of activities including music, dance, art, drama, and debate for overall personality development.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Music and dance classes</li>
+                                <li><i class="fas fa-check"></i> Art and craft workshops</li>
+                                <li><i class="fas fa-check"></i> Drama and theater</li>
+                                <li><i class="fas fa-check"></i> Debate and public speaking</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 5: AC Classrooms -->
+                    <div class="feature-panel" data-panel="4">
+                        <div class="feature-image-box">
+                            <img src="assets/slider2.jpg" alt="AC Classrooms">
+                        </div>
+                        <div class="feature-details">
+                            <h3><img src="icons/ac-classroom.svg" class="inline-svg">Air-Conditioned Classrooms</h3>
+                            <p>All classrooms are air-conditioned for comfortable learning environment, ensuring better concentration and productivity.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Comfortable temperature control</li>
+                                <li><i class="fas fa-check"></i> Better concentration environment</li>
+                                <li><i class="fas fa-check"></i> Enhanced learning experience</li>
+                                <li><i class="fas fa-check"></i> All-season comfort</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 6: Smart Classrooms -->
+                    <div class="feature-panel" data-panel="5">
+                        <div class="feature-image-box">
+                            <img src="assets/slider3.jpg" alt="Smart Classrooms">
+                        </div>
+                        <div class="feature-details">
+                            <h3><img src="icons/smart-classroom.svg" class="inline-svg">Smart Classrooms with Digital Panels</h3>
+                            <p>Equipped with digital panels and interactive tools for engaging and effective education through technology.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Interactive digital boards</li>
+                                <li><i class="fas fa-check"></i> Audio-visual learning aids</li>
+                                <li><i class="fas fa-check"></i> Digital learning resources</li>
+                                <li><i class="fas fa-check"></i> Technology-enabled teaching</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 7: Hostel -->
+                    <div class="feature-panel" data-panel="6">
+                        <div class="feature-image-box">
+                            <img src="assets/slider4.jpg" alt="Hostel">
+                        </div>
+                        <div class="feature-details">
+                            <h3><img src="icons/hostel.svg" class="inline-svg">Hostel Facilities</h3>
+                            <p>Safe and comfortable hostel with supervision, nutritious food, and homely environment for outstation students.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Separate hostels for boys and girls</li>
+                                <li><i class="fas fa-check"></i> 24/7 security and supervision</li>
+                                <li><i class="fas fa-check"></i> Nutritious and hygienic food</li>
+                                <li><i class="fas fa-check"></i> Study rooms and recreation areas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principal's Message -->
+    <section id="principal-message" class="principal-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header-premium" data-aos="fade-up">
+                <span class="section-badge">FROM THE PRINCIPAL'S DESK</span>
+                <h2 class="section-title-premium">
+                    A Message of <span class="text-gradient">Excellence</span>
+                </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mt-16">
+                <div class="principal-image" data-aos="fade-right">
+                    <div class="image-frame">
+                        <img src="assets/Principal.jpeg" alt="Principal">
+                        <div class="principal-badge">
+                            <h4>Principal</h4>
+                            <p>St. Johns Public School</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="principal-message" data-aos="fade-left">
+                    <div class="quote-mark">"</div>
+                    <div class="message-content">
+                        <p>St. Johns public school is a convent that has been established to provide the children ample opportunities to grow and progress in a modern and scientific way.</p>
+                        
+                        <p>The Institution is equipped with ultra modern teaching aids and facilities. We at <strong>St. John's Public school</strong> strive to nurture the young mind in a way that enables them to achieve excellence not only in academic pursuit but also in every aspect of life by keeping close contact with parents.</p>
+                        
+                        <p>We believe not only in the ability of Spoken English but also in overall development of personality of the child and lay emphasis on character-building, discipline, team work-spirit and moral values.</p>
+                        
+                        <p class="message-closing">I hope our sincere, honest and dedicated efforts will help this institution grow in totality to remarkable heights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="footer-content">
+                <img src="assets/logost.png" alt="St. Johns" class="footer-logo">
+                <h3 class="footer-title">St. Johns Public School</h3>
+                <p class="footer-subtitle">Excellence in Education Since 2010</p>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>© 2024 St. Johns Public School, Warisaliganj (Nawada). All rights reserved.</p>
+                    <p>Designed with <span class="text-red-500">♥</span> for Excellence in Education</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
