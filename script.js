@@ -167,16 +167,11 @@ function updateProgressBar() {
 
 window.addEventListener('scroll', updateProgressBar, { passive: true });
 
-// ==========================================
-// NAVIGATION
-// ==========================================
 const navbar = document.getElementById('navbar');
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
-// Navbar scroll effect - Enhanced & Always Visible
 if (navbar) {
-    // Function to show navbar
     function showNavbar() {
         navbar.style.opacity = '1';
         navbar.style.visibility = 'visible';
@@ -185,17 +180,13 @@ if (navbar) {
         navbar.style.display = 'block';
     }
     
-    // Check if preloader exists and hide accordingly
     const preloader = document.getElementById('preloader');
     
-    // If preloader doesn't exist or is already hidden, show navbar immediately
     if (!preloader || preloader.classList.contains('hidden')) {
         showNavbar();
     } else {
-        // Wait for preloader to hide
         setTimeout(showNavbar, 2100);
         
-        // Also watch for preloader class changes
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 if (mutation.attributeName === 'class') {
@@ -219,22 +210,18 @@ if (navbar) {
             navbar.classList.remove('scrolled');
         }
         
-        // Always show navbar (don't hide on scroll down)
         showNavbar();
         
         lastScroll = currentScroll;
     }, { passive: true });
     
-    // Ensure navbar is visible on load
     window.addEventListener('load', () => {
         setTimeout(showNavbar, 500);
     });
     
-    // Fallback - show navbar after 3 seconds regardless
     setTimeout(showNavbar, 3000);
 }
 
-// Mobile menu toggle
 let menuOpen = false;
 mobileMenuBtn.addEventListener('click', () => {
     menuOpen = !menuOpen;
@@ -248,7 +235,6 @@ mobileMenuBtn.addEventListener('click', () => {
     }
 });
 
-// Mobile dropdowns
 const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
 mobileDropdownBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -258,7 +244,6 @@ mobileDropdownBtns.forEach(btn => {
     });
 });
 
-// Close mobile menu on link click
 const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-dropdown-content a');
 mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -269,7 +254,6 @@ mobileLinks.forEach(link => {
     });
 });
 
-// Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
@@ -294,7 +278,6 @@ function updateActiveNav() {
 
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 
-// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -313,9 +296,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ==========================================
-// HERO SWIPER SLIDER
-// ==========================================
 const heroSwiper = new Swiper('.hero-swiper', {
     effect: 'fade',
     loop: true,
@@ -330,9 +310,6 @@ const heroSwiper = new Swiper('.hero-swiper', {
     },
 });
 
-// ==========================================
-// COUNTER ANIMATION
-// ==========================================
 function animateCounter(element) {
     const target = parseInt(element.getAttribute('data-count'));
     const duration = 2000;
@@ -350,7 +327,6 @@ function animateCounter(element) {
     }, 16);
 }
 
-// Trigger counters when visible
 const statObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -369,19 +345,14 @@ document.querySelectorAll('.hero-stats').forEach(stats => {
     statObserver.observe(stats);
 });
 
-// ==========================================
-// FEATURE NAVIGATION
-// ==========================================
 const featureBtns = document.querySelectorAll('.feature-btn');
 const featurePanels = document.querySelectorAll('.feature-panel');
 
 featureBtns.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-        // Remove active class
         featureBtns.forEach(b => b.classList.remove('active'));
         featurePanels.forEach(p => p.classList.remove('active'));
         
-        // Add active class
         btn.classList.add('active');
         const targetPanel = document.querySelector(`.feature-panel[data-panel="${index}"]`);
         if (targetPanel) {
@@ -390,9 +361,6 @@ featureBtns.forEach((btn, index) => {
     });
 });
 
-// ==========================================
-// BACK TO TOP BUTTON
-// ==========================================
 const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
@@ -410,9 +378,6 @@ backToTop.addEventListener('click', () => {
     });
 });
 
-// ==========================================
-// PARTICLE EFFECT
-// ==========================================
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
     if (!particlesContainer) return;
@@ -457,16 +422,12 @@ document.head.appendChild(particleStyle);
 
 createParticles();
 
-// ==========================================
-// PARALLAX EFFECT - ENHANCED
-// ==========================================
 let ticking = false;
 window.addEventListener('scroll', () => {
     if (!ticking) {
         window.requestAnimationFrame(() => {
             const scrolled = window.pageYOffset;
             
-            // Parallax for blobs
             const blobs = document.querySelectorAll('.blob');
             blobs.forEach((blob, index) => {
                 const speed = (index + 1) * 0.1;
@@ -479,9 +440,6 @@ window.addEventListener('scroll', () => {
     }
 }, { passive: true });
 
-// ==========================================
-// SMOOTH IMAGE REVEAL
-// ==========================================
 const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -500,9 +458,6 @@ document.querySelectorAll('.image-frame img, .feature-image-box img').forEach(im
     imageObserver.observe(img);
 });
 
-// ==========================================
-// TILT EFFECT ON CARDS (Desktop Only)
-// ==========================================
 if (window.innerWidth > 1024) {
     const tiltCards = document.querySelectorAll('.quick-card, .why-card');
     
@@ -527,9 +482,6 @@ if (window.innerWidth > 1024) {
     });
 }
 
-// ==========================================
-// TYPING EFFECT (Optional)
-// ==========================================
 function typeWriter(element, text, speed = 50) {
     let i = 0;
     element.textContent = '';
@@ -545,9 +497,6 @@ function typeWriter(element, text, speed = 50) {
     type();
 }
 
-// ==========================================
-// CONSOLE MESSAGE
-// ==========================================
 console.log('%c🎓 St. Johns Public School', 'color: #d4af37; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);');
 console.log('%c✨ Premium Website - Where Excellence Meets Innovation', 'color: #fbbf24; font-size: 14px; font-style: italic;');
 console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #666;');
@@ -555,22 +504,14 @@ console.log('%c📞 Contact: 06324-273356, 7033872656', 'color: #999; font-size:
 console.log('%c📧 Email: sjps754wrs@gmail.com', 'color: #999; font-size: 12px;');
 console.log('%c📍 Location: K. N. Market, Warisaliganj, Nawada', 'color: #999; font-size: 12px;');
 
-// ==========================================
-// INITIALIZE EVERYTHING
-// ==========================================
 document.addEventListener('DOMContentLoaded', () => {
     console.log('✅ Website loaded successfully!');
     
-    // Refresh AOS
     setTimeout(() => {
         AOS.refresh();
     }, 500);
 });
 
-// ==========================================
-// PERFORMANCE OPTIMIZATION
-// ==========================================
-// Debounce function
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -583,7 +524,7 @@ function debounce(func, wait) {
     };
 }
 
-// Throttle scroll events
+
 const throttledScroll = debounce(() => {
     updateProgressBar();
     updateActiveNav();

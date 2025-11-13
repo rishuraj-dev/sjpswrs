@@ -1,7 +1,3 @@
-/* ==========================================
-   PREMIUM ST. JOHNS PUBLIC SCHOOL WEBSITE
-   Dark Theme with Gold Accents - OVERPOWERED!
-   ========================================== */
 
 * {
     margin: 0;
@@ -31,9 +27,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ==========================================
-   CUSTOM CURSOR
-   ========================================== */
 .cursor-dot {
     position: fixed;
     width: 8px;
@@ -58,9 +51,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* ==========================================
-   PROGRESS BAR
-   ========================================== */
 .progress-bar-top {
     position: fixed;
     top: 0;
@@ -71,9 +61,6 @@ body {
     transition: width 0.1s ease;
 }
 
-/* ==========================================
-   PRELOADER - PREMIUM (FIXED & ENHANCED)
-   ========================================== */
 .preloader-overlay {
     position: fixed !important;
     top: 0 !important;
@@ -162,7 +149,6 @@ body {
     left: 30px;
 }
 
-/* Logo INSIDE the loading circle */
 .loader-logo {
     position: absolute;
     top: 50%;
@@ -254,9 +240,6 @@ body {
     }
 }
 
-/* ==========================================
-   NAVIGATION - PREMIUM (FIXED & ENHANCED)
-   ========================================== */
 .navbar-premium {
     position: fixed !important;
     top: 0 !important;
@@ -272,7 +255,6 @@ body {
     padding: 0 !important;
 }
 
-/* Hide navbar behind preloader */
 .preloader-overlay:not(.hidden) ~ .navbar-premium,
 body:has(.preloader-overlay:not(.hidden)) .navbar-premium {
     opacity: 0 !important;
@@ -309,7 +291,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
-/* Logo */
 .logo-container {
     position: relative;
     display: flex;
@@ -470,12 +451,10 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     transition: transform 0.3s ease;
 }
 
-/* Dropdown Container - FIXED WITH BRIDGE */
 .nav-dropdown-container {
     position: relative;
 }
 
-/* Invisible bridge to prevent dropdown from disappearing */
 .nav-dropdown-container::before {
     content: '';
     position: absolute;
@@ -515,7 +494,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     z-index: 10001;
 }
 
-/* Right-align dropdowns near screen edge */
 @media (min-width: 1024px) {
     .nav-dropdown-container:last-child .nav-dropdown-content,
     .nav-dropdown-container:nth-last-child(2) .nav-dropdown-content {
@@ -530,7 +508,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     }
 }
 
-/* Show dropdown on hover - including bridge area */
 .nav-dropdown-container:hover .nav-dropdown-content,
 .nav-dropdown-content:hover {
     opacity: 1 !important;
@@ -597,7 +574,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     height: 60%;
 }
 
-/* CTA Button - FIXED SIZE */
 .cta-button {
     display: inline-flex;
     align-items: center;
@@ -630,7 +606,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     font-size: 15px;
 }
 
-/* Mobile Menu */
 .mobile-menu-toggle {
     display: flex;
     flex-direction: column;
@@ -764,13 +739,10 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* ==========================================
-   HERO SECTION - PREMIUM
-   ========================================== */
 .hero-section {
     position: relative;
     min-height: 100vh;
-    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    min-height: 100dvh; 
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -787,7 +759,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     }
 }
 
-/* Ensure hero content doesn't get cut off */
 .hero-content {
     position: relative;
     z-index: 10;
@@ -860,7 +831,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     overflow: hidden;
 }
 
-/* Swiper Hero Slider */
 .hero-swiper {
     position: absolute !important;
     inset: 0;
@@ -887,7 +857,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     width: 100%;
 }
 
-/* Hero Typography */
 .badge-premium {
     display: inline-flex;
     align-items: center;
@@ -1007,7 +976,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     }
 }
 
-/* Hero Stats */
 .hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1044,7 +1012,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     }
 }
 
-/* Hero Image Container */
 .hero-image-container {
     position: relative;
     animation: fadeInUp 0.8s ease 0.6s both;
@@ -1141,7 +1108,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     color: #fff;
 }
 
-/* Scroll Indicator - ONLY ARROW (No Mouse Curve) */
 .scroll-indicator {
     position: absolute;
     bottom: 60px;
@@ -1156,7 +1122,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     pointer-events: none;
 }
 
-/* Hide the mouse scroll curve thing - ONLY show arrow */
 .mouse-scroll {
     display: none !important;
     visibility: hidden !important;
@@ -1169,7 +1134,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     display: none !important;
 }
 
-/* Show ONLY the arrow */
 .scroll-indicator::before {
     content: '↓';
     font-size: 48px;
@@ -1276,9 +1240,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     width: 32px;
 }
 
-/* ==========================================
-   INFO BAR
-   ========================================== */
 .info-bar {
     position: relative;
     padding: 20px 0;
@@ -1308,9 +1269,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     font-size: 16px;
 }
 
-/* ==========================================
-   QUICK LINKS SECTION
-   ========================================== */
 .quick-links-section {
     padding: 80px 0;
     position: relative;
@@ -1437,9 +1395,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     transform: translateX(8px);
 }
 
-/* ==========================================
-   SECTIONS - COMMON STYLES
-   ========================================== */
 .welcome-section,
 .why-choose-section,
 .special-features-section,
@@ -1531,9 +1486,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     background-clip: text;
 }
 
-/* ==========================================
-   WELCOME SECTION
-   ========================================== */
 .welcome-image .image-frame {
     position: relative;
     background: rgba(31, 41, 55, 0.5);
@@ -1599,9 +1551,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     color: #9ca3af;
 }
 
-/* ==========================================
-   WHY CHOOSE US CARDS
-   ========================================== */
 .why-card {
     position: relative;
     background: linear-gradient(135deg, rgba(31, 41, 55, 0.6), rgba(17, 24, 39, 0.6));
@@ -1713,9 +1662,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     color: var(--green);
 }
 
-/* ==========================================
-   SPECIAL FEATURES - PREMIUM LAYOUT
-   ========================================== */
 .features-layout {
     display: grid;
     grid-template-columns: 320px 1fr;
@@ -1889,9 +1835,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     }
 }
 
-/* ==========================================
-   PRINCIPAL SECTION
-   ========================================== */
 .principal-image .image-frame {
     position: relative;
     background: rgba(31, 41, 55, 0.5);
@@ -1973,9 +1916,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     color: #9ca3af !important;
 }
 
-/* ==========================================
-   FOOTER
-   ========================================== */
 .footer-premium {
     padding: 60px 0 30px;
     background: var(--dark);
@@ -2046,9 +1986,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     margin-bottom: 8px;
 }
 
-/* ==========================================
-   BACK TO TOP BUTTON
-   ========================================== */
 .back-to-top {
     position: fixed;
     bottom: 32px;
@@ -2080,9 +2017,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     box-shadow: 0 15px 40px rgba(212, 175, 55, 0.6);
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN
-   ========================================== */
 @media (max-width: 1024px) {
     .hero-section {
         min-height: auto;
@@ -2171,7 +2105,7 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
 
     .floating-card {
         padding: 12px;
-        display: none; /* Hide on mobile for cleaner look */
+        display: none; 
     }
 
     .floating-card-1 {
@@ -2203,9 +2137,6 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     }
 }
 
-/* ==========================================
-   UTILITY ANIMATIONS
-   ========================================== */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -2233,23 +2164,17 @@ body:not(:has(.preloader-overlay)) .navbar-premium {
     }
 }
 
-/* ==========================================
-   PREMIUM ENHANCEMENTS
-   ========================================== */
-/* Smooth scroll behavior */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
 }
 
-/* Focus visible for accessibility */
 *:focus-visible {
     outline: 2px solid var(--gold);
     outline-offset: 2px;
     border-radius: 4px;
 }
 
-/* Image loading state */
 img {
     transition: opacity 0.3s ease;
 }
@@ -2259,14 +2184,12 @@ img[loading="lazy"] {
     animation: fadeIn 0.5s ease forwards;
 }
 
-/* Enhanced button hover states */
 .cta-button:active,
 .btn-hero-primary:active,
 .btn-hero-secondary:active {
     transform: translateY(0) scale(0.98);
 }
 
-/* Navbar container fix */
 .navbar-premium > .max-w-7xl {
     position: relative;
     z-index: 10001;
@@ -2293,12 +2216,10 @@ img[loading="lazy"] {
     flex-shrink: 0;
 }
 
-/* Prevent content jump on scroll */
 body {
     scrollbar-gutter: stable;
 }
 
-/* Enhanced selection */
 ::selection {
     background: rgba(212, 175, 55, 0.4);
     color: #fff;
@@ -2309,9 +2230,6 @@ body {
     color: #fff;
 }
 
-/* ==========================================
-   SCROLLBAR STYLING
-   ========================================== */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -2329,9 +2247,7 @@ body {
     background: linear-gradient(180deg, var(--gold-light), var(--gold));
 }
 
-/* ==========================================
-   SELECTION
-   ========================================== */
+
 ::selection {
     background: rgba(212, 175, 55, 0.3);
     color: var(--gold-light);
